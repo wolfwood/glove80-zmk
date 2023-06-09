@@ -28,6 +28,11 @@
 #define SYM     3
 #define NAV     4
 #define MAGIC   5
+
+&gresc {
+    keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
 / {
     /*gresc: grave_escape {
         keep-mods = <(MOD_LSFT|MOD_RSFT)>;
