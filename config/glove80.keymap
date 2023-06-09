@@ -142,9 +142,9 @@
             bindings = <
      &trans      &trans      &trans      &trans      &trans                                                                                        &trans      &trans      &trans      &trans      &trans
      &trans      &trans      &trans      &trans      &trans      &trans                                                                &trans      &trans      &trans      &trans      &trans      &trans
-     &trans      &trans      &trans      &trans      &trans      &trans                                                                &trans      &trans      &trans      &trans      &trans      &trans
-     &trans      &trans      &trans      &trans      &trans      &trans                                                                &trans      &trans      &trans      &trans      &trans      &trans
-     &trans      &trans      &trans      &trans      &trans      &trans   &trans    &trans    &trans    &trans    &trans    &trans     &trans      &trans      &trans      &trans      &trans      &trans
+     &trans      &trans      &trans       &kp J      &trans      &trans                                                                &trans      &trans      &trans      &trans      &trans      &trans
+     &trans      &trans      &trans      &trans      &trans      &trans                                                                 &kp M &mt RCTRL N &mt RSHFT E      &trans      &trans      &trans
+     &trans      &trans      &trans      &trans      &trans      &trans   &trans    &trans    &trans    &trans    &trans    &trans      &kp K   &lt SYM H      &trans      &trans      &trans      &trans
      &trans      &trans      &trans      &trans      &trans               &trans    &trans    &trans    &trans    &trans    &trans                 &trans      &trans      &trans      &trans      &trans
 
 	    >;
