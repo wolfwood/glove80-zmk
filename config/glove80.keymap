@@ -51,6 +51,43 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
+
+	just_left: left_no_mods {
+	      compatible = "zmk,behavior-mod-morph";
+	      label = "JUST_LEFT";
+	      #binding-cells = <0>;
+	      bindings = <&kp LEFT>, <&kp LEFT>;
+	      mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+	      keep-mods = <0>;
+	};
+	mega: mega_pairs {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_PAIRS";
+	      #binding-cells = <0>;
+	      bindings = <&mega_abrq>, <&parens>;
+	      mods = <(MOD_LALT|MOD_RALT)>;
+	};
+	mega_abrq: mega_abrq {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_ABRQ";
+	      #binding-cells = <0>;
+	      bindings = <&mega_brq>, <&abrackets>;
+	      mods = <(MOD_LGUI|MOD_RGUI)>;
+	};
+	mega_brq: mega_brq {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_BRQ";
+	      #binding-cells = <0>;
+	      bindings = <&braces>, <&mega_quotes>;
+	      mods = <(MOD_LCTL|MOD_RCTL)>;
+	};
+	mega_quotes: mega_quotes {
+		 compatible = "zmk,behavior-mod-morph";
+		 label = "MEGA_QUOTES";
+		 #binding-cells = <0>;
+		 bindings = <&dquotes>, <&squotes>;
+		 mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
     };
 
     combos {
@@ -143,6 +180,44 @@
 	    #binding-cells = <0>;
 	    bindings = <&macro_press &kp F23>, <&macro_pause_for_release>, <&macro_release &kp F23>;
 	};
+
+	pair: pair {
+	      label = "PAIR";
+	      compatible = "zmk,behavior-macro-two-param";
+              #binding-cells = <2>; // Must be 2
+	      bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>, <&just_left>;
+	};
+
+	braces: braces {
+		label = "BRACES";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&pair LBKT RBKT>;
+	};
+	squotes: single_quotes {
+		 label = "SQUOTES";
+		 compatible = "zmk,behavior-macro";
+		 #binding-cells = <0>;
+		 bindings = <&pair SQT SQT>;
+	};
+	dquotes: double_quotes {
+		 label = "DQUOTES";
+		 compatible = "zmk,behavior-macro";
+		 #binding-cells = <0>;
+		 bindings = <&pair DQT DQT>;
+	};
+	abrackets: angle_brackets {
+		   label = "ABRACKETS";
+		   compatible = "zmk,behavior-macro";
+		   #binding-cells = <0>;
+		   bindings = <&pair LT GT>;
+	};
+	parens: parens {
+		label = "PARENS";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&pair LPAR RPAR>;
+	};
     };
 
     magic: magic_hold_tap {
@@ -217,7 +292,7 @@
        &none            &none            &none            &none            &none            &none                                                   &none            &none            &none            &none            &none            &none
        &none            &none            &none            &none            &none            &none                                                   &none            &none            &none            &none            &none            &none
        &none      &mt LALT N1      &mt LGUI N2     &mt LSHFT N3     &mt LCTRL N4           &kp N5                                                  &kp N6     &mt RCTRL N7     &mt RSHFT N8      &mt RALT N9      &mt RALT N0        &kp EQUAL
-       &none            &none            &none            &none            &none            &none   &trans  &trans  &trans  &trans  &trans  &trans  &none            &none            &none            &none            &none            &none
+       &none            &none            &none            &none            &none            &none   &trans  &trans  &trans  &trans  &trans  &trans  &none            &mega            &none            &none            &none            &none
        &none            &none            &none            &none            &none                    &trans  &trans  &trans  &trans  &trans  &trans                   &none            &none            &none
        &none            &none
        >;
