@@ -186,7 +186,6 @@
      &trans      &trans      &trans      &trans      &trans      &trans                                                                 &kp M &mt RCTRL N &mt RSHFT E      &trans      &trans      &trans
      &trans      &trans      &trans      &trans      &trans      &trans   &trans    &trans    &trans    &trans    &trans    &trans      &kp K   &lt SYM H      &trans      &trans      &trans      &trans
      &trans      &trans      &trans      &trans      &trans               &trans    &trans    &trans    &trans    &trans    &trans                 &trans      &trans      &trans      &trans      &trans
-
 	    >;
         };
 
@@ -198,7 +197,6 @@
      &trans      &trans      &trans      &trans &mt LCTRL T      &trans                                                                 &kp M &mt RCTRL N &mt RSHFT E      &trans      &trans      &trans
      &trans      &trans      &trans      &trans   &lt NAV J       &kp V   &trans    &trans    &trans    &trans    &trans    &trans      &kp K   &lt SYM H      &trans      &trans      &trans      &trans
      &trans      &trans      &trans      &trans      &trans               &trans    &trans    &trans    &trans    &trans    &trans                 &trans      &trans      &trans      &trans      &trans
-
 	    >;
         };
 
@@ -218,9 +216,10 @@
        &none            &none            &none            &none            &none                                                                                     &none            &none            &none            &none            &none
        &none            &none            &none            &none            &none            &none                                                   &none            &none            &none            &none            &none            &none
        &none            &none            &none            &none            &none            &none                                                   &none            &none            &none            &none            &none            &none
-       &none      &mt LALT N1      &mt LGUI N2     &mt LSHFT N3     &mt LCTRL N4           &kp N5                                                  &kp N6     &mt RCTRL N7     &mt RSHFT N8      &mt RALT N9            &kp N0         &kp EQUAL
+       &none      &mt LALT N1      &mt LGUI N2     &mt LSHFT N3     &mt LCTRL N4           &kp N5                                                  &kp N6     &mt RCTRL N7     &mt RSHFT N8      &mt RALT N9      &mt RALT N0        &kp EQUAL
        &none            &none            &none            &none            &none            &none   &trans  &trans  &trans  &trans  &trans  &trans  &none            &none            &none            &none            &none            &none
-       &none            &none            &none            &none            &none                    &trans  &trans  &trans  &trans  &trans  &trans                   &none            &none            &none            &none            &none
+       &none            &none            &none            &none            &none                    &trans  &trans  &trans  &trans  &trans  &trans                   &none            &none            &none
+       &none            &none
        >;
 };
 
