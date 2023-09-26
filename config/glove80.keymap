@@ -37,6 +37,8 @@
 #define NAV     5
 #define MAGIC   6
 
+#define ALPHAS QWERTY TARMAK TARMAK2
+
 &gresc {
     keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 };
@@ -128,13 +130,13 @@
 	   		  timeout-ms = <50>;
           		  key-positions = <25 37>;
            		  bindings = <&caps_word>;
-			  layers = <QWERTY TARMAK TARMAK2>;
+			  layers = <ALPHAS>;
            };
 	   combo_capsword2 {
 	   		   timeout-ms = <50>;
           		   key-positions = <30 42>;
            		   bindings = <&caps_word>;
-			   layers = <QWERTY TARMAK TARMAK2>;
+			   layers = <ALPHAS>;
            };
 	   combo_home {
 	   	      timeout-ms = <50>;
