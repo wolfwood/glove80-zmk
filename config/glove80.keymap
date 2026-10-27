@@ -35,7 +35,8 @@
 #define LOWER   3
 #define SYM     4
 #define NAV     5
-#define MAGIC   6
+#define FUNC    6
+#define MAGIC   7
 
 #define ALPHAS QWERTY TARMAK TARMAK2
 
@@ -148,7 +149,12 @@
           	     key-positions = <40 41>;
            	     bindings = <&kp END>;
            };
-
+	   combo_mega {
+	   		  timeout-ms = <50>;
+          		  key-positions = <58 59>;
+           		  bindings = <&mega>;
+			  layers = <ALPHAS>;
+           };
     };
 
     macros {
@@ -278,12 +284,12 @@
 
         layer_Base {
             bindings = <
- &tog TARMAK     &kp F2    &mkp MB2     &mkp MB3     &mkp MB1                                                                                       &kp F6       &kp F7      &kp F8         &kp F9    &kp F10
-     &gresc      &kp N1      &kp N2       &kp N3       &kp N4  &kp N5                                                                  &kp N6       &kp N7       &kp N8      &kp N9         &kp N0  &kp EQUAL
-    &kp TAB       &kp Q       &kp W        &kp E        &kp R   &kp T                                                                   &kp Y        &kp U        &kp I       &kp O          &kp P   &kp BSLH
+     &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                                                                                       &kp F6       &kp F7      &kp F8         &kp F9    &kp F10
+  &kp MINUS      &kp N1      &kp N2       &kp N3       &kp N4  &kp N5                                                                  &kp N6       &kp N7       &kp N8      &kp N9         &kp N0  &kp EQUAL
+    &kp TAB       &kp Q       &kp W        &kp E        &kp R   &kp T                                                                   &kp Y        &kp U        &kp I       &kp O          &kp P    &kp SQT
   &bspc_del &hml LALT A &hml LGUI S &hml LSHFT D &hml LCTRL F   &kp G                                                                   &kp H &hmr RCTRL J &hmr RSHFT K &hmr RGUI L &hmr RALT SEMI    &kp RET
-  &kp MINUS       &kp Z       &kp X    &lt SYM C    &lt NAV V   &kp B    &gresc   &mkp MB3   &mkp MB1      &mkp MB1    &mkp MB3   &mkp MB1   &kp N    &lt SYM M    &kp COMMA     &kp DOT       &kp FSLH    &kp SQT
-&magic MAGIC 0 &kp HOME     &kp END     &kp LEFT    &kp RIGHT         &kp SPACE  &kp UNDER   &mkp MB2      &mkp MB2     &kp TAB    &kp RET               &kp UP     &kp DOWN    &kp LBKT       &kp RBKT  &kp PG_DN
+     &gresc       &kp Z  &lt FUNC X    &lt SYM C    &lt NAV V   &kp B    &gresc      &none   &none      &none       &none       &none   &kp N   &lt SYM M &lt NAV COMMA &lt FUNC DOT      &kp FSLH   &kp BSLH
+&magic MAGIC 0 &kp HOME     &kp END     &kp LEFT    &kp RIGHT         &kp SPACE  &kp UNDER   &none      &none     &kp TAB    &kp RET                &kp UP     &kp DOWN    &kp LBKT       &kp RBKT  &kp EQUAL
             >;
         };
 
@@ -322,25 +328,36 @@
 
 	layer_Sym {
 	    bindings = <
-       &none            &none            &none            &none            &none                                                                                     &none            &none            &none            &none            &none
-       &none            &none            &none            &none            &none            &none                                                   &none            &none            &none            &none            &none            &none
-      &trans         &kp EXCL           &kp AT         &kp HASH         &kp DLLR        &kp PRCNT                                               &kp CARET         &kp AMPS         &kp STAR         &kp LPAR         &kp RPAR         &kp PIPE
-      &trans     &hml LALT N1     &hml LGUI N2    &hml LSHFT N3    &hml LCTRL N4           &kp N5                                                  &kp N6    &hmr RCTRL N7    &hmr RSHFT N8     &hmr RALT N9     &hmr RALT N0        &kp EQUAL
-      &trans        &kp MINUS        &kp UNDER         &kp PLUS         &kp LBRC         &kp RBRC   &trans  &trans  &trans  &trans  &trans  &trans &kp LBKT          &mega           &trans           &trans           &trans         &kp BSLH
-       &none            &none            &none            &none            &none                    &trans  &trans  &trans  &trans  &trans  &trans                   &none            &none            &none            &none            &none
+	  &trans         &trans         &trans         &trans         &trans                                                                              &trans         &trans       &trans    &trans      &trans
+       &none          &none          &none          &none          &none        &none                                                   &none          &none          &none        &none     &none       &none
+      &trans       &kp EXCL         &kp AT       &kp HASH       &kp DLLR    &kp PRCNT                                               &kp CARET       &kp AMPS       &kp STAR     &kp LPAR  &kp RPAR    &kp PIPE
+      &trans     &hml LALT N1 &hml LGUI N2  &hml LSHFT N3  &hml LCTRL N4       &kp N5                                                  &kp N6  &hmr RCTRL N7  &hmr RSHFT N8 &hmr RALT N9 &hmr RALT N0 &kp EQUAL
+   &kp GRAVE      &kp MINUS      &kp UNDER       &kp PLUS      &kp EQUAL     &kp LBRC   &trans  &trans  &trans  &trans  &trans  &trans &kp RBRC        &mega         &trans       &trans    &trans      &trans
+       &none          &none          &none          &none          &none                &trans  &trans  &trans  &trans  &trans  &trans                 &none          &none        &none     &none       &none
        >;
 };
 
     layer_Nav {
 	    bindings = <
-       &none            &none            &none            &none            &none                                                                            &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none                                                   &none &kp PG_DN &kp PG_UP &kp UP &none          &none
-       &none         &kp LALT         &kp LGUI        &kp LSHFT        &kp LCTRL            &none                                                   &none &kp LEFT &kp RIGHT &kp DOWN &kp UP        &none
-       &none            &none            &none            &none            &none            &none   &trans  &trans  &trans  &trans  &trans  &trans  &none &kp LC(LEFT) &kp LC(RIGHT) &kp LC(DOWN) &kp LC(UP) &none
-       &none            &none            &none            &none            &none                    &trans  &trans  &trans  &trans  &trans  &trans          &none   &none   &none   &none           &none
+      &trans         &trans         &trans         &trans         &trans                                                                           &trans    &trans    &trans  &trans        &trans
+       &none          &none          &none          &none          &none            &none                                              &none        &none     &none     &none   &none         &none
+      &trans     &kp K_REDO      &kp LC(X)      &kp LC(C)      &kp LC(V)          &kp INS                                           &kp HOME    &kp PG_DN &kp PG_UP &kp PG_DN   &none         &none
+      &trans       &kp LALT       &kp LGUI      &kp LSHFT      &kp LCTRL            &none                                            &kp END     &kp LEFT &kp RIGHT  &kp DOWN  &kp UP        &trans
+      &trans     &kp K_UNDO      &kp K_CUT     &kp K_COPY    &kp K_PASTE &kp LS(INS) &trans &trans  &trans  &trans  &trans  &trans  &none &kp LC(LEFT) &kp LC(RIGHT) &kp LC(DOWN) &kp LC(UP)  &none
+       &none          &none          &none          &none          &none             &trans &trans  &trans  &trans  &trans  &trans                  &none     &none     &none   &none         &none
        >;
 };
+
+        layer_Func {
+            bindings = <
+      &none       &none        &none       &none       &none                                                                                         &none       &none       &none       &none       &none
+      &none       &none        &none       &none       &none       &none                                                                 &none       &none       &none       &none       &none       &none
+      &none  &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP    &kp F20       &none                                                              &kp K_PP  &kp K_PREV  &kp K_NEXT       &none       &none       &none
+     &none &hml LALT F1 &hml LGUI F2 &hml LSHFT F3 &hml LCTL F4   &kp F5                                                              &kp F6 &hmr RCTRL F7 &hmr RSHFT F8 &hmr RALT F9 &hmr RALT F10  &kp F12
+     &trans       &none &kp C_BRI_DN &kp C_BRI_UP    &kp F11       &none    &none     &none     &none     &none     &none     &none      &none       &none       &none       &none       &none       &none
+      &none       &none        &none       &none       &none               &trans     &none     &none     &none     &none    &trans                  &none       &none       &none       &none       &none
+	    >;
+        };
 
          layer_Magic {
             bindings = <
@@ -348,7 +365,7 @@
        &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-      &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none          &sys_reset
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };
