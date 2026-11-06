@@ -289,7 +289,7 @@
     &kp TAB       &kp Q       &kp W        &kp E        &kp R   &kp T                                                                   &kp Y        &kp U        &kp I       &kp O          &kp P    &kp SQT
   &bspc_del &hml LALT A &hml LGUI S &hml LSHFT D &hml LCTRL F   &kp G                                                                   &kp H &hmr RCTRL J &hmr RSHFT K &hmr RGUI L &hmr RALT SEMI    &kp RET
      &gresc       &kp Z  &lt FUNC X    &lt SYM C    &lt NAV V   &kp B    &gresc      &none   &none      &none       &none       &none   &kp N   &lt SYM M &lt NAV COMMA &lt FUNC DOT      &kp FSLH   &kp BSLH
-&magic MAGIC 0 &kp HOME     &kp END     &kp LEFT    &kp RIGHT         &kp SPACE  &kp UNDER   &none      &none     &kp TAB    &kp RET                &kp UP     &kp DOWN    &kp LBKT       &kp RBKT  &kp EQUAL
+&magic MAGIC 0    &none       &none        &none        &none         &kp SPACE  &kp UNDER   &none      &none     &kp TAB     &kp RET               &none         &none        &none         &none  &kp EQUAL
             >;
         };
 
@@ -332,7 +332,7 @@
        &none          &none          &none          &none          &none        &none                                                   &none          &none          &none        &none     &none       &none
       &trans       &kp EXCL         &kp AT       &kp HASH       &kp DLLR    &kp PRCNT                                               &kp CARET       &kp AMPS       &kp STAR     &kp LPAR  &kp RPAR    &kp PIPE
       &trans     &hml LALT N1 &hml LGUI N2  &hml LSHFT N3  &hml LCTRL N4       &kp N5                                                  &kp N6  &hmr RCTRL N7  &hmr RSHFT N8 &hmr RALT N9 &hmr RALT N0 &kp EQUAL
-   &kp GRAVE      &kp MINUS      &kp UNDER       &kp PLUS      &kp EQUAL     &kp LBRC   &trans  &trans  &trans  &trans  &trans  &trans &kp RBRC        &mega         &trans       &trans    &trans      &trans
+   &kp GRAVE      &kp MINUS      &kp UNDER       &kp PLUS      &kp EQUAL     &kp LBKT   &trans  &trans  &trans  &trans  &trans  &trans &kp RBKT        &mega         &trans       &trans    &trans      &trans
        &none          &none          &none          &none          &none                &trans  &trans  &trans  &trans  &trans  &trans                 &none          &none        &none     &none       &none
        >;
 };
